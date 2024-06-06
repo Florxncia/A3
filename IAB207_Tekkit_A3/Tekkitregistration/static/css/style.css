@@ -1,0 +1,1035 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: "Poppins" !important;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Top Header Styles */
+.top-header {
+  background-color: #f4f4f4;
+  padding: 1% 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: -620px;
+}
+
+.logo img {
+  max-width: 70px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Poppins";
+  width: 400px;
+  margin-left: 0px;
+}
+
+.search-bar button[type="submit"] {
+  padding: 8px 15px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+/* Header Styles */
+header {
+  background-color: #f4f4f4;
+  padding: 0px 40px 1px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+nav ul li.separator::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5px;
+  height: 24px;
+  background-color: #333;
+}
+
+nav ul li a {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Carousel Section Styles */
+.carousel {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.carousel-inner {
+  border-radius: 12px;
+}
+
+.carousel-item img {
+  width: 800px;
+  height: 500px;
+  object-fit: fill;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon::before:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1), brightness(150%);
+}
+
+.carousel-caption {
+  bottom: 0;
+  top: auto;
+  margin: 0px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  margin-bottom: 0;
+}
+
+.carousel-caption .btn {
+  position: relative;
+  bottom: 20px;
+}
+
+/* Bestsellers Section Styles */
+.bestsellers {
+  justify-content: space-around;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.section-header h2 {
+  margin-bottom: 50px;
+}
+
+.bestseller {
+  height: 300px;
+  margin: 70px 136px;
+}
+
+.bestseller h2 {
+  margin-bottom: 20px;
+}
+
+.bestseller h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.bestseller p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bestseller img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 10px;
+  align-items: center;
+}
+
+/* View All Button for Bestsellers Section */
+.bestsellers .view-all-container {
+  text-align: center;
+  margin-top: 20px;
+  /* Adjust the margin-top to move the button down */
+  clear: both;
+  /* Clear any floats */
+}
+
+.bestsellers .view-all-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Section Header */
+.concerts .section-header {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* Individual Concert */
+.concert {
+  height: 300px;
+  margin: 70px 136px;
+}
+
+.concert img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.concert h2 {
+  text-align: left;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.concert p {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* View All Button */
+.concerts .view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #0056b3;
+}
+
+.musicals {
+  justify-content: space-around;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.musical {
+  height: 300px;
+  margin: 70px 136px;
+}
+
+.musical h2 {
+  text-align: left;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.musical p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.musical img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #0056b3;
+}
+
+.bestseller h3,
+.bestseller p,
+.concert h2,
+.concert p,
+.musical h2,
+.musical p {
+  white-space: nowrap;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Background color with transparency */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Section Header */
+.recommended-keywords .section-header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Keyword Buttons */
+.keyword-buttons {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.keyword-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #d9d9d9;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.keyword-btn:hover {
+  background-color: #c0c0c0;
+}
+
+/* Event details container */
+.event-status {
+  position: absolute;
+  top: 132px;
+  left: 40px;
+  background-color: #adadad;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Event details container */
+.event-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 80px 40px;
+}
+
+.event-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: -532px;
+}
+
+.event-status {
+  margin-bottom: 20px;
+}
+
+.event-name {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.event-info {
+  margin-left: 420px;
+}
+
+.event-info p {
+  margin-bottom: 5px;
+}
+
+.event-image img {
+  max-width: 100%;
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.event-description {
+  margin-top: 140px !important;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.ticket-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.ticket-type {
+  margin-bottom: 10px;
+}
+
+.ticket-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ticket-btn:hover {
+  background-color: #0056b3;
+}
+
+.quantity {
+  display: none;
+  margin-top: 5px;
+}
+
+.quantity button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+}
+
+.total-price {
+  margin-top: 20px;
+}
+
+.buy-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Event description styles */
+.event-description {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 80px);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.event-description h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  /* Add unit (e.g., px) */
+}
+
+.event-description h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.event-description p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment-section-heading {
+  font-size: 24px;
+  padding: 20px 40px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.comment {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px 80px;
+  border-radius: 5px;
+}
+
+.comment img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.comment h5 {
+  margin-top: 0;
+}
+
+.comment p {
+  margin-bottom: 0;
+}
+
+.comment-creation-section {
+  margin-top: 20px;
+}
+
+.comment-creation-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px 40px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px 40px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.comment-submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-submit-button:hover {
+  background-color: #0056b3;
+}
+
+.comment-input-wrapper {
+  position: relative;
+}
+
+.comment-submit-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Event Creation Form Styles */
+.create-event-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-event-container h1 {
+  text-align: center;
+  margin-top: 0px;
+  color: #007bff;
+}
+
+.create-event-container form {
+  margin-top: 20px;
+}
+
+.create-event-container label {
+  font-weight: bold;
+}
+
+.create-event-container input[type="text"],
+.create-event-container input[type="number"],
+.create-event-container input[type="date"],
+.create-event-container textarea,
+.create-event-container input[type="file"],
+.create-event-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.create-event-container textarea {
+  height: 100px;
+}
+
+.create-event-container input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-event-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Genre Buttons */
+#genreButtons {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#genreButtons .keyword-btn {
+  margin: 5px;
+  padding: 8px 20px;
+  background-color: #d9d9d9;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#genreButtons .keyword-btn:hover {
+  background-color: #c0c0c0;
+}
+
+#genreButtons .keyword-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Category Buttons */
+#categoryButtons {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#categoryButtons .keyword-btn {
+  margin: 5px;
+  padding: 8px 20px;
+  background-color: #d9d9d9;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#categoryButtons .keyword-btn:hover {
+  background-color: #c0c0c0;
+}
+
+#categoryButtons .keyword-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Concert and Venue Details Container */
+.concert-and-venue-details-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Concert Details Container */
+.concert-details-container,
+.venue-details-container {
+  margin-bottom: 20px;
+}
+
+.concert-details-container h2,
+.venue-details-container h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #007bff;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.submit-button {
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ticket Types Container */
+.ticket-types-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-types-container h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #007bff;
+}
+
+/* Ticket Type */
+.ticket-type {
+  margin-bottom: 20px;
+}
+
+.ticket-type h3 {
+  margin-top: 0;
+}
+
+.ticket-type label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ticket-type input[type="text"],
+.ticket-type input[type="number"],
+.ticket-type select,
+.ticket-type textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.ticket-type textarea {
+  height: 100px;
+}
+
+/* Submit Button */
+.submit-button {
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.add-ticket-button,
+.submit-button {
+  display: block;
+  width: 250px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-ticket-button:hover,
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.booking-section h2 {
+  color: #007bff;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.event-table {
+  align-items: center;
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.event-table th,
+.event-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.event-table th {
+  background-color: #f2f2f2;
+}
+
+.event-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.event-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.event-table img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+/* Login Page */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+}
+.login-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+}
+
+.login-container p {
+  margin: 0.5rem 0;
+  color: #888888;
+}
+
+.login-container a {
+  color: #183bd6;
+  text-decoration: none;
+}
+
+.login-container .input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-container .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.login-container .input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #183bd6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #183bd6;
+}
+
+.forget-password {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+/* Error Page */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+  color: #333;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0;
+  color: #666;
+}
+
+p {
+  font-size: 16px;
+  margin: 15px 0;
+  color: #666;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
