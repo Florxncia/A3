@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <main>
+        <!-- Active Events Section -->
+        <section class="booking-section">
+            <h2>Active Events</h2>
+            <table class="event-table">
+                <thead>
+                    <tr>
+                        <th>Event Photo</th>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="Event Details.html"><img src="SN.jpeg" alt="Event 1 Photo"></td>
+                        </a>
+                        <td>Event 1</td>
+                        <td>January 1, 2025</td>
+                        <td>7:00 PM</td>
+                        <td>Venue 1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="booking-section">
+            <h2>Inactive Events</h2>
+            <table class="event-table">
+                <thead>
+                    <tr>
+                        <th>Event Photo</th>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="SYMPHONY.jpg" alt="Event 2 Photo"></td>
+                        <td>Event 2</td>
+                        <td>December 31, 2024</td>
+                        <td>8:00 PM</td>
+                        <td>Venue 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Very Cool Not Really Booking History. All rights reserved.</p>
+    </footer>
+{% endblock %}

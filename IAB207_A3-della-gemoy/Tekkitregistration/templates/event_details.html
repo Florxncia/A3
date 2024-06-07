@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+    <div class="event-details-container">
+        <div class="event-status">{{event.status}}</div>
+        <h2 class="event-name">{{event.name}}</h2>
+        <div class="event-image">
+            <img src="{{event.image}}" alt="event-image">
+        </div>
+    </div>
+
+    <div class="event-info-container">
+        <div class="event-info">
+            <p><strong>Artist:</strong>{{event.artist}}</p>
+            <p><strong>Genre:</strong> Punk/Rock</p>
+            <p><strong>Ticket Price:</strong>{{event.price}}</p>
+            <p><strong>Description:</strong>{{event.description}}</p>
+        </div>
+
+        <div class="ticket-form">
+            <h2>Select Tickets</h2>
+            <div class="ticket-type">
+                <label for="vip-tickets">VIP Seats</label>
+                <input type="number" id="vip-tickets" name="vip-tickets" value="0" min="0">
+            </div>
+            <div class="ticket-type">
+                <label for="diamond-tickets">Diamond Seats</label>
+                <input type="number" id="diamond-tickets" name="diamond-tickets" value="0" min="0">
+            </div>
+            <div class="ticket-type">
+                <label for="gold-tickets">Gold Seats</label>
+                <input type="number" id="gold-tickets" name="gold-tickets" value="0" min="0">
+            </div>
+            <div class="total-price">
+                <h3>Total Price: <span id="total">0</span></h3>
+            </div>
+            <button class="buy-btn">Buy Tickets</button>
+        </div>
+
+
+    </div>
+
+    <div class="event-description">
+        <h1>Concert Details</h1>
+        <h3><strong>Announcements:</strong></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie augue scelerisque scelerisque
+            scelerisque. Suspendisse laoreet hendrerit enim, vitae faucibus velit convallis sit amet. Donec tristique
+            sem vel quam condimentum sollicitudin. Mauris ut tellus sed lectus pharetra scelerisque. Proin condimentum
+            felis et nulla facilisis maximus. Maecenas arcu quam, malesuada non pretium nec, vulputate sed leo. Aenean
+            vitae tortor pellentesque, cursus lectus mollis, commodo dui. Nunc turpis dolor, sollicitudin pellentesque
+            neque at, maximus blandit sapien. Praesent ultricies nibh nunc, ut pretium ex viverra sit amet. Donec auctor
+            facilisis lorem. Vivamus in risus placerat, pretium urna eget, lobortis turpis. Proin suscipit non tortor
+            non consequat. Suspendisse in odio et felis consequat fringilla. Ut id lectus at tellus viverra suscipit.
+            Donec leo tellus, consectetur ut sapien ac, lacinia pretium nunc. Ut at mi nec tellus rutrum egestas.</p>
+        <h3><strong>Seating Information:</strong></h3>
+        <p>Vestibulum lectus quam, dignissim ut est non, dictum aliquam risus. In at blandit orci, eu tincidunt sapien.
+            Fusce finibus feugiat massa, id lobortis nunc finibus id. Maecenas hendrerit convallis nibh, fringilla
+            ultrices nulla vestibulum ut. In lacinia sem non ex dictum vestibulum. Maecenas commodo nunc sed facilisis
+            congue. Etiam elementum aliquet fringilla. Nam efficitur nunc maximus lorem tristique auctor. Pellentesque
+            aliquet et arcu nec porta. Curabitur sit amet cursus ex, vel ullamcorper dolor. Ut cursus augue rutrum
+            ligula rutrum convallis.</p>
+        <h3><strong>Additional Information:</strong></h3>
+        <p>Curabitur felis orci, cursus vel tempus sed, dictum sit amet orci. Quisque convallis ex quis placerat auctor.
+            In sodales massa sed cursus finibus. Aliquam nisl nibh, malesuada at augue non, elementum lobortis orci.
+            Etiam finibus consequat elit.</p>
+    </div>
+    </div>
+
+    <h2 class="comment-section-heading">Comment Section</h2>
+
+    <div class="comments-section">
+        <div class="comment media">
+            <img class="mr-3" src="CHOSO.jpg" alt="User Avatar">
+            <div class="media-body">
+                <h5 class="mt-0">User Name</h5>
+                Comment text goes here...
+            </div>
+        </div>
+
+        <div class="comment media mt-3">
+            <img class="mr-3" src="KERMIT.jpg" alt="User Avatar">
+            <div class="media-body">
+                <h5 class="mt-0">Another User</h5>
+                Another comment text goes here...
+            </div>
+        </div>
+    </div>
+
+    <div class="comment-creation-section">
+        <h2 class="comment-creation-heading">Add a Comment</h2>
+        <form id="comment-form">
+            <div class="comment-input-wrapper">
+                <textarea id="comment-input" class="comment-input" placeholder="Write your comment here..."
+                    rows="4"></textarea>
+                <button type="submit" class="comment-submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Super Very Advanced Event Details Page. All rights reserved.</p>
+    </footer>
+{% endblock %}

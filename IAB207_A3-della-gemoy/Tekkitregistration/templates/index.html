@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{{url_for('static', filename='image/1DD.webp')}}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{url_for('static', filename='image/5SOS.jpg')}}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{url_for('static', filename='image/XH.jpg')}}" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+        </a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="events">
+        <div class="section-header">
+            <h1>Upcoming Events</h1>
+            <h4>Find tickets to your favorite events now!</h4>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters row">
+            <form class="search-bar d-flex col-md-12">
+                <input class="form-control me-2" type="search" placeholder="Search for event, artist, etc..." aria-label="Search", name="searched">
+                <button class="btn btn-outline-secondary" type="submit" name="Search"><i class="fa fa-search" style="color: #333;"></i></button> 
+            </form>
+            <div class="genre-filter">
+                <small class="mini-title">Category/Genre</small>
+                <div class="genre-options">
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Pop</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Rock</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Rap</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Hip-Hop</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">R&B</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Reggae</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Punk</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">K-Pop</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Ballad</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Dangdut</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Festivals</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Classical</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Jazz</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">EDM</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Opera</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Traditional</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Contemporary</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Concert</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Musical</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Recital</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Choir</button>
+                    <button type="button" class="genre btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Live</button>
+                    
+                </div>
+            </div>
+            <!--<div class="buttons col-md-12">
+                <button type="button" class="btn btn-secondary">Apply</button>
+                <button type="button" class="btn btn-outline-secondary">Reset</button>
+            </div>-->
+        </div>
+
+        <!-- List of upcoming events -->
+        <div class="container events-list-container">
+        <div class="events-list row justify-content-around align-items-start">
+            {% if events %}
+                {% for event in events %}
+                <div class="event-card col-sm col-md-4">
+                    <a href="{{url_for('event.event_details', id=event.id)}}">
+                        <div class="event">
+                            <div class="img-container">
+                                <img src="{{event.image}}" alt="event-image">
+                            </div>
+                            <span class="badge badge-pill badge-{{ event.status | lower | replace(' ', '-') }}" name="{{event.status}}">{{event.status}}</span>
+                            <h3>{{event.name}}</h3>
+                            <p>{{event.description}}</p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No events found matching your search criteria.</p>
+            {% endif %}
+        </div>
+        </div>
+        <!--<div class="view-all-btn-container">
+            <button class="view-all-btn">View All</button>
+        </div>-->
+    </section>
+
+    <!--<section class="recommended-keywords">
+        <div class="section-header">
+            <h2>Recommended Keywords</h2>
+        </div>
+
+        <div class="keyword-buttons">
+            <button class="keyword-btn">K-Pop</button>
+            <button class="keyword-btn">Classical</button>
+            <button class="keyword-btn">Online Concert</button>
+            <button class="keyword-btn">Indie</button>
+            <button class="keyword-btn">Live Band</button>
+        </div>
+    </section>-->
+{% endblock %}
